@@ -1,0 +1,54 @@
+﻿<Window x:Class="student_Score_Manager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:student_Score_Manager"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="900" Width="1600">
+    <Grid>
+        <ListView x:Name="dataListView" ItemsSource="{Binding CsvData}" Margin="0,93,808,10">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="SBD" DisplayMemberBinding="{Binding SBD}" Width="100"/>
+                    <GridViewColumn Header="Toan" DisplayMemberBinding="{Binding Toan}" Width="100"/>
+                    <GridViewColumn Header="Van" DisplayMemberBinding="{Binding Van}" Width="100"/>
+                    <GridViewColumn Header="Ly" DisplayMemberBinding="{Binding Ly}" Width="100"/>
+                    <GridViewColumn Header="Sinh" DisplayMemberBinding="{Binding Sinh}" Width="100"/>
+                    <GridViewColumn Header="Ngoai Ngu" DisplayMemberBinding="{Binding NgoaiNgu}" Width="100"/>
+                    <GridViewColumn Header="Year" DisplayMemberBinding="{Binding Year}" Width="100"/>
+                    <GridViewColumn Header="Hoa" DisplayMemberBinding="{Binding Hoa}" Width="100"/>
+                    <GridViewColumn Header="Su" DisplayMemberBinding="{Binding LichSu}" Width="100"/>
+                    <GridViewColumn Header="Dia" DisplayMemberBinding="{Binding DiaLy}" Width="100"/>
+                    <GridViewColumn Header="GDCD" DisplayMemberBinding="{Binding GDCD}" Width="100"/>
+                    <GridViewColumn Header="Ma Tinh" DisplayMemberBinding="{Binding MaTinh}" Width="100"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="BrowseFilesBtn" Content="Browse File" HorizontalAlignment="Left" Margin="430,28,0,0" VerticalAlignment="Top" Click="BrowseFilesBtn_Click" />
+        <TextBox x:Name="PathTxt" HorizontalAlignment="Left" Margin="10,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="405"/>
+        <Button x:Name="InsertBtn" Content="Insert Database" HorizontalAlignment="Left" Margin="10,68,0,0" VerticalAlignment="Top" Click="InsertBtn_Click"/>
+        <Button x:Name="DeleteBtn" Content="Delete Database" HorizontalAlignment="Left" Margin="135,68,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="Show_Statisics" Content="Show Statisics" HorizontalAlignment="Left" Margin="714,68,0,0" VerticalAlignment="Top" Click="Show_Statisics_Click"/>
+        <ListView x:Name="ScoreDataStatisticsListView" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="800,93,0,512">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Year" DisplayMemberBinding="{Binding Year}" Width="100"/>
+                    <GridViewColumn Header="StudentCountAtThisYear" DisplayMemberBinding="{Binding StudentCountAtThisYear}" Width="100"/>
+                    <GridViewColumn Header="CountToan" DisplayMemberBinding="{Binding CountToan}" Width="100"/>
+                    <GridViewColumn Header="CountVan" DisplayMemberBinding="{Binding CountVan}" Width="100"/>
+                    <GridViewColumn Header="CountLy" DisplayMemberBinding="{Binding CountLy}" Width="100"/>
+                    <GridViewColumn Header="CountSinh" DisplayMemberBinding="{Binding CountSinh}" Width="100"/>
+                    <GridViewColumn Header="CountNgoaiNgu" DisplayMemberBinding="{Binding CountNgoaiNgu}" Width="100"/>
+                    <GridViewColumn Header="CountLichSu" DisplayMemberBinding="{Binding CountLichSu}" Width="100"/>
+                    <GridViewColumn Header="CountDiaLy" DisplayMemberBinding="{Binding CountDiaLy}" Width="100"/>
+                    <GridViewColumn Header="CountGDCD" DisplayMemberBinding="{Binding CountGDCD}" Width="100"/>
+
+
+
+
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>
