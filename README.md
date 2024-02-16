@@ -4,4 +4,4 @@ feature:
 - insert database
 - statistics score data
 
-[untitled.png](https://postimg.cc/z3Rjx5Dk)
+[![untitled.png](https://i.postimg.cc/NGdzffWZ/untitled.png)](https://postimg.cc/z3Rjx5Dk)
